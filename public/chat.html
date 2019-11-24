@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/styles.min.css"/>
+  
+</head>
+<body class="chat">
+    <div class="chat__sidebar">
+        <h3>People</h3>
+        <div id ="users"></div>
+    </div>
+
+    <div class="chat__main">
+
+    
+    
+    <ol id="messages" class="chat__messages"></ol>
+    <div class="chat__footer">
+    <form id="message-form">
+        <input name="message" type="text" placeholder="type your message" autofocus />
+        <button> send</button>
+    </form>
+</div>
+</div>
+<script id="message-template" type="text/template">
+<li class="message">
+<div class="message__title">
+    <h4>{{from}}</h4>
+    <span>{{createAt}}</span>
+
+</div>
+<div class="message__body">
+    <p>{{text}}</p>
+</div>
+</li>
+</script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script type="text/javascript" src="js/libs/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="js/libs/mustache.js"></script>
+    <script type="text/javascript" src="js/libs/moment.js"></script>
+    <script type="text/javascript" src="js/libs/deparam.js"></script>
+    <script src="js/chat.js"></script>
+
+    
+</body>
+</html>
