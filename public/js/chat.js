@@ -71,7 +71,7 @@ jQuery('#message-form').on('submit', function(e) {
     e.preventDefault();
     socket.emit('createMessage', {
         from: params.name,
-        text: socket.id,
+        text: jQuery('[name=message]').val(),
         createAt: new Date().getTime()
     }, function() {
         console.log('got it ');
